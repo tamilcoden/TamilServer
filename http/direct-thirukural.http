@@ -1,0 +1,57 @@
+@api = http://localhost:3000/thirukural
+@paalEndpoint = {{api}}/paals
+@iyalEndpoint = {{api}}/iyals
+@athigaramEndpoint = {{api}}/athigarams
+@kuralEndpoint = {{api}}/kurals
+
+#============================= Overview 0️⃣
+###
+GET {{api}}/overview
+
+
+#============================= All 1️⃣
+###
+GET {{paalEndpoint}}
+###
+GET {{iyalEndpoint}}
+###
+GET {{athigaramEndpoint}}
+###
+GET {{kuralEndpoint}}
+
+#============================= 2️⃣ By id 🎯
+###
+Get {{kuralEndpoint}}/1
+
+
+#============================= 3️⃣ Filter 🔠
+###
+GET {{kuralEndpoint}}?id=1&id=2
+
+
+#============================= 4️⃣ Paginate ⏩
+###
+Get {{kuralEndpoint}}/?_page=4
+
+###
+Get {{kuralEndpoint}}/?_page=4&_limit=2
+
+
+#============================= 5️⃣ Sort 🔃
+###
+Get {{api}}/sections?_sort=id&_order=desc
+
+
+#============================= 6️⃣ Slice 🍕
+###
+Get {{api}}/kurals?_start=20&_end=25
+
+
+#============================= 7️⃣ Operators #️⃣
+###
+Get {{api}}/sections?id_gt=1
+
+#============================= 8️⃣ Search 🔎
+###
+Get {{api}}/kurals?q=மழை 
+

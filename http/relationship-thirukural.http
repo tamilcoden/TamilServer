@@ -1,0 +1,42 @@
+@api = http://localhost:3000/thirukural
+@paalEndpoint = {{api}}/paals
+@iyalEndpoint = {{api}}/iyals
+@athigaramEndpoint = {{api}}/athigarams
+@kuralEndpoint = {{api}}/kurals
+
+
+#============================= All 🎯
+###
+GET {{paalEndpoint}}
+###
+GET {{iyalEndpoint}}
+###
+GET {{athigaramEndpoint}}
+###
+GET {{kuralEndpoint}}
+
+#============================= Relationship 👪
+
+###
+GET {{kuralEndpoint}}/3
+
+###
+
+GET {{iyalEndpoint}}/2?_embed=athigarams
+
+
+#============================= Variable 🔶
+###`
+@constAthigaram = 1
+GET {{athigaramEndpoint}}/{{constAthigaram}}
+# -------------------------------random var-------------------
+### named request
+@varAthigaram = {{$randomInt 1 33}}
+# @name reqAthigaram
+GET {{athigaramEndpoint}}/{{varAthigaram}}
+
+
+#============================= Named request usage 🌀
+# named request response data
+###
+GET {{kuralEndpoint}}?athigaramId={{reqAthigaram.response.body.id}}

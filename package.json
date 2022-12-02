@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "json-server ./dbs/_db.js --routes ./dbs/router.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^8.0.3",
+    "json-server": "^0.17.1"
+  }
+}

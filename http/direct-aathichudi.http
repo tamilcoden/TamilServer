@@ -1,0 +1,48 @@
+@api = http://localhost:3000/aathichudi
+@paadalsEndpoint = {{api}}/paadals
+#============================= Overview 🎯
+###
+GET {{api}}/overview
+
+
+#============================= All 🎯
+###
+GET {{paadalsEndpoint}}
+
+###
+#============================= By id 🎯
+###
+Get {{paadalsEndpoint}}/1
+
+
+#============================= Filter 🔠
+###
+GET {{paadalsEndpoint}}?id=1&id=2
+
+
+#============================= Paginate ⏩
+###
+Get {{paadalsEndpoint}}/?_page=4
+
+###
+Get {{paadalsEndpoint}}/?_page=4&_limit=2
+
+
+#============================= Sort 🔃
+###
+Get {{paadalsEndpoint}}?_sort=id&_order=desc
+
+
+#============================= Slice 🍕
+###
+Get {{paadalsEndpoint}}?_start=20&_end=25
+
+
+#============================= Operators #️⃣
+###
+Get {{paadalsEndpoint}}?id_gt=1
+
+#============================= Search 🔎
+###
+Get {{paadalsEndpoint}}?q=சினம்
+
