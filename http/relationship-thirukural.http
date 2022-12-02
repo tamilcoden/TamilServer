@@ -39,4 +39,4 @@ GET {{athigaramEndpoint}}/{{varAthigaram}}
 #============================= Named request usage 🌀
 # named request response data
 ###
-GET {{kuralEndpoint}}?athigaramId={{reqAthigaram.response.body.id}}
+GET {{kuralEndpoint}}?athigaramId={{reqAthigaram.response.body.$[0].id}}
