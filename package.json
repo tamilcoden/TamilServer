@@ -2,13 +2,8 @@
   "name": "tamilserver",
   "version": "1.0.0",
   "description": "",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
-    "start": "node index.js",
-    "start1": "json-server ./dbs/_db.js --routes ./dbs/router.json",
-    "build": "echo 'hello build' && npm install"
+    "start": "json-server ./dbs/_db.js --routes ./dbs/router.json"
   },
   "author": "",
   "license": "ISC",
