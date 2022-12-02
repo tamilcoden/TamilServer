@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "json-server ./dbs/_db.js --routes ./dbs/router.json"
+    "start": "json-server ./dbs/_db.js --routes ./dbs/router.json",
+    "build": "npm run build"
   },
   "author": "",
   "license": "ISC",
